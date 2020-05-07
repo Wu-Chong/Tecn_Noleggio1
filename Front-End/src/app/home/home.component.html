@@ -1,0 +1,17 @@
+<h2>Basic Request</h2>
+<button type="button" (click)="makeRequest()">Make Request</button>
+<div *ngIf="loading">loading...</div>
+<div></div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<button type="button" (click)="getCurrentLocation()">Get Location</button>
+<div *ngIf="loading2">
+  <p>Latitudine: {{currLat}}</p>
+  <p>Longitudine: {{currLng}}</p>
+</div>
+
+
