@@ -1,17 +1,21 @@
-<h2>Basic Request</h2>
-<button type="button" (click)="makeRequest()">Make Request</button>
-<div *ngIf="loading">loading...</div>
-<div></div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<button type="button" (click)="getCurrentLocation()">Get Location</button>
-<div *ngIf="loading2">
+<h1>Benvenuto {{data[0].nome}} {{data[0].cognome}}</h1>
+
+<div>
+  <br>
+  <button type="button" *ngIf="!loading" class="btn btn-primary" (click)="getCurrentLocation()">Prenota Bici 1</button>
+</div>
+
+<!--<div *ngIf="loading" id="bici" class="col-sm-8 col-md">
+  <p>Bici <button type="button" class="btn btn-secondary" id='rilascia'>RILASCIA</button></p>
+</div>-->
+
+<div *ngIf="loading">
+  <p>IdUtente: {{data[0].IdUtente}}</p>
   <p>Latitudine: {{currLat}}</p>
   <p>Longitudine: {{currLng}}</p>
+  <p>Data inizio: {{myDate}}</p>
+  <p>Ora Inizio: {{myTime}}</p>
 </div>
+
 
 
